@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – DrametiX</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/7PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" 
+        rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    /* About page specific styles */
+    .about-hero {
+      height: 50vh;
+      min-height: 400px;
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.92)),
+                  url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=90') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 70px; /* space for fixed navbar */
+    }
+
+    .about-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.2rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: -1px;
+    }
+
+    .about-hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      opacity: 0.9;
+    }
+
+    .about-container {
+      max-width: 1100px;
+      margin: 5rem auto;
+      padding: 0 6%;
+      color: #ddd;
+      line-height: 1.9;
+      font-size: 1.08rem;
+    }
+
+    .about-container h2 {
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      margin: 3.5rem 0 1.4rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .about-container h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+    }
+
+    .about-mission {
+      background: rgba(20,20,20,0.6);
+      padding: 2.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      margin: 2.5rem 0;
+      backdrop-filter: blur(8px);
+    }
+
+    .about-team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .team-member {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(30,30,30,0.4);
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .team-member:hover {
+      transform: translateY(-8px);
+    }
+
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-hero h1 { font-size: 3rem; }
+      .about-hero p { font-size: 1.2rem; }
+      .about-container { padding: 0 5%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo-link">
+      <div class="logo-wrapper">
+        <img src="image/image1logo.png" alt="DrametiX" class="logo-image">
+        <span class="logo-text">DrametiX</span>
+      </div>
+    </a>
+
+    <ul class="nav-links desktop-nav">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#c-drama">C-Drama</a></li>
+      <li><a href="index.html#k-drama">K-Drama</a></li>
+      <li><a href="index.html#movies">Movies</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="policy.html">Policy</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links mobile-nav" id="mobile-nav">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#c-drama">C-Drama</a></li>
+      <li><a href="index.html#k-drama">K-Drama</a></li>
+      <li><a href="index.html#movies">Movies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="policy.html">Policy</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Banner for About Page -->
+  <div class="about-hero">
+    <div>
+      <h1>About DrametiX</h1>
+      <p>Where Asian stories come to life</p>
+    </div>
+  </div>
+
+  <!-- Main About Content -->
+  <div class="about-container">
+    <h2>Our Story</h2>
+    <p>DrametiX was born from a deep passion for Asian storytelling. Founded in 2025 in Ranchi, Jharkhand, we set out to create a beautiful, user-friendly platform where fans can easily discover and enjoy the best Korean dramas, Chinese dramas, Japanese series, Thai BL, and Asian films.</p>
+
+    <p>What started as a small project to share hidden gems has grown into a curated destination trusted by thousands of drama lovers across India and beyond.</p>
+
+    <div class="about-mission">
+      <h3>Our Mission</h3>
+      <p>To bring the richest and most emotional Asian stories directly to your screen — with love, respect, and zero clutter. We believe every great drama deserves to be found, felt, and remembered.</p>
+    </div>
+
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Hand-curated collections of trending and timeless K-Dramas, C-Dramas, and Asian movies</li>
+      <li>Regular updates with the latest releases and upcoming premieres (2026 & beyond)</li>
+      <li>Clean, cinematic interface designed for drama lovers</li>
+      <li>Simple discovery tools — no login required, no ads interrupting your experience</li>
+      <li>Community-driven recommendations and honest vibes</li>
+    </ul>
+
+    <!-- <h2>Meet the Team</h2>
+    <div class="about-team">
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Founder">
+        <h4>Shivansh</h4>
+        <small>Founder & Lead Curator</small>
+        <p>Drama addict turned creator. Watches 3 episodes before breakfast.</p>
+      </div>
+
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Content Lead">
+        <h4>Aarohi</h4>
+        <small>Content & C-Drama Specialist</small>
+        <p>Knows every historical palace drama by heart.</p>
+      </div>
+
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Tech Lead">
+        <h4>Rahul</h4>
+        <small>Tech & Design</small>
+        <p>Makes sure the site feels as smooth as your favorite OST.</p>
+      </div>
+    </div> -->
+
+    <h2>Get in Touch</h2>
+    <p>We love hearing from fellow drama lovers. Whether you want to recommend a hidden gem, report a bug, or just say hi — drop us a line:</p>
+    <p><strong>Email:</strong> <a href="mailto:hello@drametix.com">hello@drametix.com</a></p>
+    <p>Follow us for daily drama updates and recommendations.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#c-drama">C-Drama</a>
+      <a href="index.html#k-drama">K-Drama</a>
+      <a href="index.html#movies">Movies</a>
+      <a href="about.html">About</a>
+      <a href="policy.html">Policy</a>
+    </div>
+    <p>© 2026 DrametiX. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

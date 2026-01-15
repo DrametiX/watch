@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C-Drama – DrametiX</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/7PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700;900&display=swap" 
+        rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="scdrama.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo-link">
+      <div class="logo-wrapper">
+        <img src="image/image1logo.png" alt="DrametiX" class="logo-image">
+        <span class="logo-text">DrametiX</span>
+      </div>
+    </a>
+
+    <ul class="nav-links desktop-nav">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="cdrama.html" class="active">C-Drama</a></li>
+      <li><a href="kdrama.html">K-Drama</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="policy.html">Policy</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links mobile-nav" id="mobile-nav">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="cdrama.html">C-Drama</a></li>
+      <li><a href="kdrama.html">K-Drama</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="policy.html">Policy</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="cdrama-hero">
+    <div class="hero-content">
+      <h1>C-Drama</h1>
+      <p>Epic tales • Timeless romance • Ancient cultivation worlds</p>
+    </div>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Popular</button>
+    <button class="filter-btn">Recent</button>
+    <button class="filter-btn">Historical</button>
+    <button class="filter-btn">Romance</button>
+    <button class="filter-btn">Xianxia</button>
+    <button class="filter-btn">Wuxia</button>
+    <button class="filter-btn">Modern</button>
+  </div>
+
+  <!-- Drama Grid -->
+  <section class="cdrama-section">
+    <div class="cdrama-grid" id="cdrama-grid"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html#home">Home</a>
+      <a href="cdrama.html">C-Drama</a>
+      <a href="kdrama.html">K-Drama</a>
+      <a href="movies.html">Movies</a>
+      <a href="about.html">About</a>
+      <a href="policy.html">Policy</a>
+    </div>
+    <p>© 2026 DrametiX. All rights reserved.</p>
+  </footer>
+
+  <!-- Episode Modal -->
+  <div class="modal episode-modal" id="episodeModal">
+    <div class="modal-content">
+      <span class="modal-close" id="closeEpisodeModal">×</span>
+      
+      <div class="episode-header">
+        <div class="episode-poster" id="modalPoster"></div>
+        <div class="episode-info">
+          <h2 id="modalDramaTitle"></h2>
+          <p id="modalDramaInfo"></p>
+          <p id="modalDramaDesc" class="episode-description"></p>
+        </div>
+      </div>
+
+      <div class="episode-list-container">
+        <h3>Episodes</h3>
+        <div id="episodeList" class="episode-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scdrama.js"></script>
+
+</body>
+</html>

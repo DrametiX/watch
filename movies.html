@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movies – DrametiX</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/7PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700;900&display=swap" 
+        rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="smovie.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="logo-link">
+      <div class="logo-wrapper">
+        <img src="image/image1logo.png" alt="DrametiX" class="logo-image">
+        <span class="logo-text">DrametiX</span>
+      </div>
+    </a>
+
+    <ul class="nav-links desktop-nav">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="cdrama.html">C-Drama</a></li>
+      <li><a href="kdrama.html">K-Drama</a></li>
+      <li><a href="movies.html" class="active">Movies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="policy.html">Policy</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links mobile-nav" id="mobile-nav">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="cdrama.html">C-Drama</a></li>
+      <li><a href="kdrama.html">K-Drama</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="policy.html">Policy</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="movies-hero">
+    <div class="hero-content">
+      <h1>Movies</h1>
+      <p>Blockbuster epics • Timeless classics • Cinematic masterpieces</p>
+    </div>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Popular</button>
+    <button class="filter-btn">Recent</button>
+    <button class="filter-btn">Action</button>
+    <button class="filter-btn">Drama</button>
+    <button class="filter-btn">Sci-Fi</button>
+    <button class="filter-btn">Horror</button>
+    <button class="filter-btn">Bollywood</button>
+  </div>
+
+  <!-- Movie Grid -->
+  <section class="movies-section">
+    <div class="movies-grid" id="movies-grid"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html#home">Home</a>
+      <a href="cdrama.html">C-Drama</a>
+      <a href="kdrama.html">K-Drama</a>
+      <a href="movies.html">Movies</a>
+      <a href="about.html">About</a>
+      <a href="policy.html">Policy</a>
+    </div>
+    <p>© 2026 DrametiX. All rights reserved.</p>
+  </footer>
+
+  <!-- Premium Movie Modal -->
+  <div class="modal movie-modal" id="movieModal">
+    <div class="modal-content">
+      <span class="modal-close" id="closeMovieModal">×</span>
+      
+      <div class="movie-header">
+        <div class="movie-poster" id="modalPoster"></div>
+        <div class="movie-info">
+          <h2 id="modalMovieTitle"></h2>
+          <p id="modalMovieInfo"></p>
+          <p id="modalMovieDesc" class="movie-description"></p>
+        </div>
+      </div>
+
+      <div class="watch-list-container">
+        <h3>Watch Options</h3>
+        <div id="watchList" class="watch-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="smovie.js"></script>
+  
+
+</body>
+</html>
